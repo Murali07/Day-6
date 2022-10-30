@@ -1,0 +1,272 @@
+TASK: https://medium.com/@reach2arunprakash/guvi-zen-simple-debugging-tasks-adcdc2d3249d
+
+
+1. Fix the code to get the largest of three.
+
+Answer:
+
+aa = (f,s,t) => {
+ console.log(f,s,t);
+ if(f>s &&f>t){
+ console.log(f)}
+ else if(s>f && s>t){
+ console.log(s)}
+ else{
+ console.log(t)}
+}
+aa(1,2,3);
+
+Output: 
+
+1 2 3
+3
+
+
+2. Fix the code to Sum of the digits present in the number
+
+Answer:
+
+let n = 123;
+console.log(add(n));
+function add(n)
+{
+  var sum = 0;
+  var numString = n + "";
+  for ( var i = 0; i < numString.length; i++ ){
+    sum = sum + Number(numString.charAt(i));
+  };
+  return sum;
+}
+
+Output:
+
+6
+
+
+3. Fix the code to Sum of all numbers using IIFE function
+
+Answer:
+
+(function(){
+    let arr = [9,8,5,6,4,3,2,1];
+    let sum=0;
+    for (let i = 0; i < arr.length; i++) {
+        sum +=arr[i];
+    }
+    console.log(sum);
+})();
+
+Output: 
+
+38
+
+
+4. Fix the code to gen Title caps.
+
+Answer:
+
+ //Anonymous function
+   function titleCase() {
+    let str=("hello world".toLowerCase().split(" "));
+ 
+  for (let i = 0; i < str.length; i++) {
+    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+  }
+  console.log(str.join(" "));
+}
+titleCase()
+
+output:
+
+Hello World
+
+
+5. Fix the code to return the Prime numbers
+
+Answer:
+
+const prime=()=>{
+        var numArray = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+           
+           numArray = numArray.filter((number) => {
+             for (var i = 2; i <= Math.sqrt(number); i++) {
+               if (number % i === 0) return false;
+             }
+             return true;
+           });
+           console.log(numArray);
+       };
+       prime();
+
+
+Output:
+
+[ 2, 3, 5, 7 ]
+
+
+6. Fix the code to sum the number in that array
+
+Answer:
+
+const sum=()=>{
+        let arr=[10, 20, 30, 40,50,60,70,80,90,100];
+           let sum=0;
+         for (let i = 0; i < arr.length; i++) {
+           sum +=arr[i];
+         }
+        console.log(sum);
+        };
+        sum();
+
+Output:
+
+550
+
+
+7. Fix the code to rotate an array by k times and return rotated array using IIFE function
+
+Answer:
+
+// IIFE function
+ (function(){
+    let nums=[1,2,3,6];
+     let k=2;
+   for (let i = 0; i < k; i++) {
+       nums.unshift(nums.pop()) ;
+   }
+ console.log(nums);
+})();
+
+Output:
+
+[ 3, 6, 1, 2 ]
+
+
+8. Fix the code to gen Title caps.
+
+Answer:
+
+//IIFE function
+   (function(){
+   let str=("hello world".toLowerCase().split(" "));
+
+ for (let i = 0; i < str.length; i++) {
+   str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+ }
+ console.log(str.join(" "));
+})();
+
+Output:
+
+Hello World
+
+
+9. print all odd numbers in an array using IIFE function
+
+Answer:
+
+//       IIFE functions//
+(function (){
+    let number=[1,2,3,4,5,6,7,8,9,10];
+    for(i=0;i<number.length;i++){
+        if(number[i]%2!==0){
+       console.log(number[i]);
+    } }
+}) ();
+
+Output:
+
+1
+3
+5
+7
+9
+
+
+10. Fix the code to reverse.
+
+Answer:
+
+(function () {
+    str = "abcd";
+    str1 = str.split("").reverse().join("");
+    console.log(str1);
+}) ();
+
+Output:
+
+dcba
+
+
+11. Fix the code to remove duplicates.
+
+Answer:
+
+ //anonymous function
+ const remove=   function(){
+let chars = [1,2,3,1,5,5];
+let uniqueChars = [...new Set(chars)];
+
+console.log(uniqueChars);
+};
+remove();
+
+Output:
+
+[ 1, 2, 3, 5 ]
+
+
+12. Fix the code to give the below output:
+
+Sum of odd numbers in an array
+
+Answer:
+
+var as=[12,34,5,6,2,56,6,2,1];
+var s=as.reduce(function(a,c){
+ if(c%2!=0)
+ {
+ return a+c;
+ }
+ return a;},0);
+console.log(s);
+
+Output:
+
+6
+
+
+13. Fix the code to give the below output:
+
+Swap the odd and even digits
+
+Answer:
+
+function swap_adjacent_digits(n) {
+  if (n.toString().length % 2 != 0) {
+    return false;
+  }
+
+  var result = 0,
+      x = 1;
+
+  while (n != 0) {
+    var dg1 = n % 10,
+        dg2 = (n - dg1) / 10 % 10;
+    result += x * (10 * dg1 + dg2);
+    n = Math.floor(n / 100);
+    x *= 100;
+  }
+
+  return result;
+}
+
+console.log(swap_adjacent_digits(1234));
+
+Output:
+
+2143
+
+
+
+
